@@ -1,0 +1,1 @@
+kill `ps -ef | grep nats-server | grep west | awk {'print$2'}`

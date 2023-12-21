@@ -1,0 +1,4 @@
+#/bin/zsh
+nats-server -c central-server1.cfg &
+nats-server -c central-server2.cfg &
+nats-server -c central-server3.cfg &

@@ -1,0 +1,12 @@
+mkdir logs
+
+source startwest
+source startcentral
+source starteast
+
+nats context add sc-west --server 127.0.0.1:14222,127.0.0.1:14223,127.0.0.1:14224 --description "Test Super-Cluster West Cluster"
+nats context add sc-central --server 127.0.0.1:24222,127.0.0.1:24223,127.0.0.1:24224 --description "Test Super-Cluster Central Cluster"
+nats context add sc-east --server 127.0.0.1:34222,127.0.0.1:34223,127.0.0.1:34224 --description "Test Super-Cluster East Cluster"
+nats context add sc-west-sys --server 127.0.0.1:14222,127.0.0.1:14223,127.0.0.1:14224 --user admin --password "s3cr3t!" --colors=red --description "Test Super-Cluster West Cluster System"
+nats context add sc-central-sys --server 127.0.0.1:24222,127.0.0.1:24223,127.0.0.1:24224 --user admin --password "s3cr3t!" --colors=red --description "Test Super-Cluster Central Cluster System"
+nats context add sc-east-sys --server 127.0.0.1:34222,127.0.0.1:34223,127.0.0.1:34224 --user admin --password "s3cr3t!" --colors=red --description "Test Super-Cluster East Cluster System"

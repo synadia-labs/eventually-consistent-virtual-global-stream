@@ -1,0 +1,41 @@
+{
+  "name": "foo-read-west",
+  "retention": "limits",
+  "max_consumers": -1,
+  "max_msgs_per_subject": -1,
+  "max_msgs": -1,
+  "max_bytes": -1,
+  "max_age": 0,
+  "max_msg_size": -1,
+  "storage": "file",
+  "discard": "old",
+  "num_replicas": 3,
+  "duplicate_window": 120000000000,
+  "placement": {
+    "cluster": "west"
+  },
+  "subject_transform": {
+    "src":"foo.*.>",
+    "dest":"foo.>"
+  },
+  "sources": [
+    {
+      "name": "foo-write-west",
+      "filter_subject": "foo.west.>"
+    },
+    {
+      "name": "foo-write-east",
+      "filter_subject": "foo.east.>"
+    },
+    {
+      "name": "foo-write-central",
+      "filter_subject": "foo.central.>"
+    }
+  ],
+  "sealed": false,
+  "deny_delete": false,
+  "deny_purge": false,
+  "allow_rollup_hdrs": false,
+  "allow_direct": false,
+  "mirror_direct": false
+}

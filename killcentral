@@ -1,0 +1,1 @@
+kill `ps -ef | grep nats-server | grep central | awk {'print$2'}`
