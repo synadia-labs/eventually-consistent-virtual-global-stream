@@ -17,7 +17,12 @@ You can start the entire Super-cluster using the provided simple script.
 source startservers
 ```
 This script also defines 3 `nats` contexts to allow you to easily select which cluster you want to connect to: `sc-west`, `sc-central` and `sc-east`.
-## Defining the local streams
+## Select context
+It is important to select one of the user contexts, created by the script in the previous step.
+```bash
+nats context select sc-central
+```
+## Define the local streams
 After a few seconds the Super-Cluster should be up and running, and then define for the first time all of the required local streams that are configured using JSON files and there is a simple convenience script to define them all.
 ```bash
 source definestreams
