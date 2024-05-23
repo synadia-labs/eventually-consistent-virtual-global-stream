@@ -1,6 +1,6 @@
-nats s add --config foo-write-west.json
-nats s add --config foo-write-central.json
-nats s add --config foo-write-east.json
-nats s add --config foo-read-west.json
-nats s add --config foo-read-central.json
-nats s add --config foo-read-east.json
+nats s add --config foo-write-west.json --context sc-west
+nats s add --config foo-write-central.json --context sc-west
+nats s add --config foo-write-east.json --context sc-west
+nats s add --config foo-read-west.json --context sc-west
+nats s add --config foo-read-central.json --context sc-west
+nats s add --config foo-read-east.json --context sc-west

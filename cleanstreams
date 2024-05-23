@@ -1,6 +1,6 @@
-nats s rm -f foo-write-west
-nats s rm -f foo-write-central
-nats s rm -f foo-write-east
-nats s rm -f foo-read-west
-nats s rm -f foo-read-central
-nats s rm -f foo-read-east
+nats s rm -f foo-write-west --context sc-west
+nats s rm -f foo-write-central --context sc-west
+nats s rm -f foo-write-east --context sc-west
+nats s rm -f foo-read-west --context sc-west
+nats s rm -f foo-read-central --context sc-west
+nats s rm -f foo-read-east --context sc-west
